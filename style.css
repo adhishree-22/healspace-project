@@ -1,0 +1,293 @@
+/* ========================= */
+/* GLOBAL SETTINGS */
+/* ========================= */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        linear-gradient(rgba(248,246,243,0.75), rgba(248,246,243,0.75)),
+        url("images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #2F3E46;
+}
+
+
+/* ========================= */
+/* NAVIGATION */
+/* ========================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2F3E46;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #52796F;
+}
+
+/* ========================= */
+/* LOGO */
+/* ========================= */
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: #52796F;
+}
+
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 8%;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 80px;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc, #ff6ec4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 8px 25px rgba(120, 115, 245, 0.3);
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.btn {
+    padding: 12px 28px;
+    background: #52796F;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #354F52;
+}
+
+.btn-primary {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(90, 79, 207, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(90, 79, 207, 0.6);
+}
+
+.btn-secondary {
+    padding: 14px 32px;
+    border-radius: 40px;
+    border: 2px solid #6a11cb;
+    background: white;
+    color: #6a11cb;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #6a11cb;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ========================= */
+/* HERO IMAGE */
+/* ========================= */
+
+.hero-image img {
+    width: 420px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* ========================= */
+/* GIF SECTION */
+/* ========================= */
+
+.gif-section {
+    padding: 80px 8%;
+    text-align: center;
+    background: #ffffff;
+}
+
+.gif-section h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 40px;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.gif-container img {
+    width: 260px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.gif-container img:hover {
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* BREATHING SECTION */
+/* ========================= */
+
+.breathing-section {
+    padding: 100px 8%;
+    text-align: center;
+    background: #f7dceb;
+}
+
+.breathing-section h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+/* Circle Container */
+
+.circle-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 40px auto;
+}
+
+/* Breathing Circle */
+
+.breathing-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #CDB4DB, #A2D2FF, #FFC8DD);
+    background-size: 300% 300%;
+    animation: breathe 9s infinite, gradientShift 6s ease infinite;
+    box-shadow: 0 0 30px rgba(162, 210, 255, 0.6);
+    position: relative;
+}
+
+
+
+/* Circle Text */
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes breathe {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.4); }
+    60% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+    padding: 30px;
+    background: #2F3E46;
+    color: white;
+    text-align: center;
+}
+@keyframes pulseGlow {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+}
+
+.logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: #6a11cb;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(106, 17, 203, 0.3);
+}
