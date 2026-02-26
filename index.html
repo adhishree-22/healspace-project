@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HealSpace</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- NAVIGATION -->
+<nav>
+   <h2 class="logo">HealSpace <span class="leaf">🌿</span></h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#breathing">Breathing</a></li>
+        <li><a href="#resources">Resources</a></li>
+    </ul>
+</nav>
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>HealSpace</h1>
+        <p class="tagline">A safe space for healing, growth, and inner peace.</p>
+        <p class="description">
+            Supporting mental well-being through awareness, guided breathing,
+            and self-care practices designed to help you reconnect with yourself.
+        </p>
+        <button class="btn-primary">Start Your Journey</button>
+        <button class="btn-secondary">Explore Resources</button>
+    </div>
+
+    <div class="hero-image">
+        <img src="images/mental-health.jpg" alt="Therapy and Mental Wellness">
+    </div>
+</section>
+
+<!-- GIF SECTION -->
+<section class="gif-section">
+    <h2>Understanding Emotions</h2>
+    <div class="gif-container">
+        <img src="images/stress.gif" alt="Stress GIF">
+        <img src="images/meditation.jpg" alt="Meditation GIF">
+    </div>
+</section>
+
+<!-- BREATHING SENSOR SECTION -->
+<section id="breathing" class="breathing-section">
+    <h2>Breathing Exercise</h2>
+    <p>Follow the circle: Inhale – Hold – Exhale</p>
+
+    <div class="circle-container">
+        <div class="breathing-circle"></div>
+        <div class="text">Breathe</div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 HealSpace | Mental Health Awareness</p>
+</footer>
+
+<script>
+    const text = document.querySelector('.text');
+
+    function breatheAnimation() {
+        text.innerText = "Inhale";
+        setTimeout(() => {
+            text.innerText = "Hold";
+        }, 4000);
+        setTimeout(() => {
+            text.innerText = "Exhale";
+        }, 7000);
+    }
+
+    breatheAnimation();
+    setInterval(breatheAnimation, 9000);
+</script>
+
+</body>
+</html>
